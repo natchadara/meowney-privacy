@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meowney – นโยบายความเป็นส่วนตัว / Privacy Policy</title>
+  <meta name="description" content="นโยบายความเป็นส่วนตัวของแอป Meowney แอปหารบิลและบันทึกค่าใช้จ่ายส่วนตัว / Privacy Policy for Meowney, a personal bill-splitting and expense tracking app." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black: #111111;
+      --white: #ffffff;
+      --paper: #faf9f5;
+      --muted: #5c5c5c;
+      --line: #111111;
+      --soft-line: #e4e1da;
+      --pink: #e8809a;
+      --pink-soft: #fbe3ea;
+      --radius: 14px;
+      --shadow: 4px 4px 0 var(--black);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--black);
+      font-family: "IBM Plex Sans Thai", "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    a { color: var(--black); text-decoration-color: var(--pink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    a:hover { background: var(--pink-soft); }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--black); color: var(--white);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 16px; gap: 12px;
+    }
+    .brand { font-family: "Space Grotesk", sans-serif; font-weight: 700; letter-spacing: 0.08em; white-space: nowrap; }
+    .brand span { color: var(--pink); }
+    .lang { display: flex; gap: 6px; }
+    .lang a {
+      color: var(--white); text-decoration: none; font-weight: 700; font-size: 14px;
+      border: 2px solid var(--white); border-radius: 999px; padding: 2px 12px;
+      transition: background .15s, color .15s;
+    }
+    .lang a:hover { background: var(--pink); color: var(--black); border-color: var(--pink); }
+
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+
+    .hero {
+      background: var(--white); border: 2px solid var(--line); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 24px 20px; margin-bottom: 28px; text-align: center;
+    }
+    .cat { font-size: 32px; font-weight: 700; margin: 0; }
+    .hero h1 { font-family: "Space Grotesk", "IBM Plex Sans Thai", sans-serif; font-size: 26px; line-height: 1.3; margin: 8px 0; }
+    .hero p { margin: 4px 0; color: var(--muted); font-size: 14px; }
+    .tag {
+      display: inline-block; background: var(--pink); color: var(--black); font-weight: 700;
+      font-size: 12px; letter-spacing: .08em; border: 2px solid var(--line); border-radius: 999px; padding: 0 10px;
+    }
+
+    .lang-section { margin-top: 36px; scroll-margin-top: 64px; }
+    .lang-title {
+      display: flex; align-items: center; gap: 10px;
+      font-family: "Space Grotesk", "IBM Plex Sans Thai", sans-serif; font-size: 22px; margin: 0 0 16px;
+    }
+    .lang-title::after { content: ""; flex: 1; height: 2px; background: var(--line); }
+
+    .toc {
+      background: var(--white); border: 2px dashed var(--line); border-radius: var(--radius);
+      padding: 14px 18px; margin-bottom: 20px;
+    }
+    .toc strong { display: block; margin-bottom: 4px; }
+    .toc ol { margin: 0; padding-left: 22px; }
+
+    .card {
+      background: var(--white); border: 2px solid var(--line); border-radius: var(--radius);
+      padding: 18px 18px 8px; margin-bottom: 18px; scroll-margin-top: 64px;
+    }
+    .card h2 {
+      font-size: 18px; line-height: 1.4; margin: 0 0 10px; display: flex; gap: 8px; align-items: baseline;
+    }
+    .card h2 .num {
+      flex: none; background: var(--black); color: var(--white); border-radius: 8px;
+      font-family: "Space Grotesk", sans-serif; font-size: 14px; padding: 0 8px;
+    }
+    .card h3 { font-size: 16px; margin: 14px 0 4px; }
+    .card p, .card li { font-size: 15px; }
+    .card ul { padding-left: 20px; margin: 6px 0 12px; }
+    .card li { margin-bottom: 4px; }
+
+    .table-wrap { overflow-x: auto; margin: 8px 0 14px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 480px; }
+    th, td { border: 1px solid var(--soft-line); padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: var(--black); color: var(--white); font-weight: 600; }
+    tr:nth-child(even) td { background: var(--paper); }
+    code { background: var(--pink-soft); border-radius: 4px; padding: 0 4px; font-size: 13px; }
+
+    .note {
+      background: var(--pink-soft); border-left: 4px solid var(--pink); border-radius: 8px;
+      padding: 10px 14px; margin: 8px 0 14px; font-size: 14px;
+    }
+
+    footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 40px; }
+    footer .cat { font-size: 20px; color: var(--black); }
+
+    @media (min-width: 640px) {
+      body { font-size: 17px; }
+      .hero h1 { font-size: 32px; }
+      .card { padding: 22px 24px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">MEOWNEY <span>(=^･ω･^=)</span></div>
+    <nav class="lang" aria-label="Language">
+      <a href="#th" id="lang-th" lang="th">ไทย</a>
+      <a href="#en" id="lang-en" lang="en">EN</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="cat">(=^･ω･^=)</p>
+      <h1>นโยบายความเป็นส่วนตัว<br />Privacy Policy</h1>
+      <p><span class="tag">MEOWNEY</span></p>
+      <p>มีผลบังคับใช้ / Effective date: 17 ตุลาคม 2569 / 17 October 2026</p>
+      <p>ผู้พัฒนา / Developer: Natcha</p>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- THAI                                                   -->
+    <!-- ===================================================== -->
+    <section id="th" class="lang-section" lang="th">
+      <h2 class="lang-title">ภาษาไทย</h2>
+
+      <p>
+        นโยบายนี้อธิบายว่าแอป <strong>Meowney</strong> (“แอป”) ซึ่งพัฒนาโดย
+        Natcha (“เรา”) เก็บ ใช้ และปกป้องข้อมูลของคุณอย่างไร
+        Meowney เป็นแอปหารบิลร้านอาหารและบันทึกค่าใช้จ่ายส่วนตัว ใช้สำหรับจดว่าใครสั่งอะไร ใครต้องจ่ายเท่าไร และใครจ่ายแล้วบ้าง
+      </p>
+
+      <nav class="toc" aria-label="สารบัญ">
+        <strong>สารบัญ</strong>
+        <ol>
+          <li><a href="#th-collect">ข้อมูลที่เราเก็บ</a></li>
+          <li><a href="#th-use">วิธีที่เราใช้ข้อมูล</a></li>
+          <li><a href="#th-storage">การจัดเก็บและผู้ให้บริการ (Supabase)</a></li>
+          <li><a href="#th-sharing">การแชร์ข้อมูล</a></li>
+          <li><a href="#th-retention">การเก็บรักษาและการลบบัญชี/ข้อมูล</a></li>
+          <li><a href="#th-rights">สิทธิ์ของผู้ใช้</a></li>
+          <li><a href="#th-children">ความเป็นส่วนตัวของเด็ก</a></li>
+          <li><a href="#th-changes">การเปลี่ยนแปลงนโยบาย</a></li>
+          <li><a href="#th-contact">ช่องทางติดต่อ</a></li>
+        </ol>
+      </nav>
+
+      <article id="th-collect" class="card">
+        <h2><span class="num">1</span> ข้อมูลที่เราเก็บ</h2>
+
+        <h3>1.1 ข้อมูลบัญชี (ที่คุณกรอกตอนสมัคร)</h3>
+        <ul>
+          <li><strong>อีเมล</strong> – ใช้สมัครและเข้าสู่ระบบ</li>
+          <li><strong>รหัสผ่าน</strong> – ส่งให้ระบบยืนยันตัวตนของ Supabase โดยตรง แอปไม่ได้เก็บรหัสผ่านไว้เอง</li>
+          <li><strong>ชื่อผู้ใช้ (username)</strong> – ชื่อที่แสดงในแอป</li>
+        </ul>
+        <p>แอปรองรับการสมัครและเข้าสู่ระบบด้วย <strong>อีเมลและรหัสผ่านเท่านั้น</strong> ไม่มีการเข้าสู่ระบบผ่าน Google, Facebook หรือบัญชีโซเชียลอื่น</p>
+
+        <h3>1.2 ข้อมูลโปรไฟล์</h3>
+        <ul>
+          <li><strong>ชื่อผู้ใช้</strong> (แก้ไขได้)</li>
+          <li><strong>มาสคอตโปรไฟล์</strong> – เป็นอีโมติคอนแมวแบบตัวอักษรที่คุณเลือกจากรายการในแอป <em>ไม่ใช่รูปภาพ</em></li>
+          <li>วันที่สร้างบัญชีและวันที่แก้ไขโปรไฟล์ล่าสุด</li>
+        </ul>
+
+        <h3>1.3 ข้อมูลที่คุณบันทึกในแอป</h3>
+        <ul>
+          <li><strong>รายชื่อเพื่อน</strong> – ชื่อที่คุณพิมพ์เอง (เช่น ชื่อเล่น) เพื่อใช้หารบิล แอปไม่ได้เข้าถึงรายชื่อติดต่อ (Contacts) ในเครื่อง</li>
+          <li><strong>บิล</strong> – ชื่อบิล, ชื่อร้าน (ไม่บังคับ), อัตราค่าบริการ (service charge) และ VAT, ผู้ที่จ่ายเงินไปก่อน, วันที่สร้าง</li>
+          <li><strong>รายการอาหาร</strong> – ชื่อเมนู, ราคา, จำนวน</li>
+          <li><strong>การแบ่งจ่าย</strong> – ใครหารเมนูไหน, ยอดที่แต่ละคนต้องจ่าย, สถานะจ่ายแล้ว/ยังไม่จ่าย และเวลาที่ทำเครื่องหมายว่าจ่ายแล้ว</li>
+        </ul>
+        <div class="note">
+          ชื่อเพื่อนที่คุณบันทึกเป็นข้อมูลของบุคคลอื่น กรุณาใช้เฉพาะชื่อที่จำเป็นต่อการหารบิล
+          เพื่อนของคุณไม่ได้มีบัญชีหรือเข้าถึงข้อมูลนี้ผ่านแอป
+        </div>
+
+        <h3>1.4 ข้อมูลที่เรา <u>ไม่ได้</u> เก็บ</h3>
+        <ul>
+          <li>ไม่ขอสิทธิ์และไม่เข้าถึง กล้อง, รูปภาพ/คลังภาพ, ไมโครโฟน, ตำแหน่ง (GPS) หรือรายชื่อติดต่อ</li>
+          <li>ไม่มีการอัปโหลดรูปภาพหรือรูปใบเสร็จ</li>
+          <li>ไม่มีระบบวิเคราะห์การใช้งาน (analytics), ระบบรายงานข้อผิดพลาด (crash reporting), โฆษณา หรือการแจ้งเตือนแบบ push</li>
+          <li>ไม่มีการชำระเงินจริงในแอป – ยอดเงินและสถานะ “จ่ายแล้ว” เป็นเพียงบันทึกที่คุณจดเอง</li>
+        </ul>
+
+        <h3>1.5 ข้อมูลทางเทคนิค</h3>
+        <p>
+          เมื่อแอปเชื่อมต่อกับเซิร์ฟเวอร์ ผู้ให้บริการ Supabase อาจบันทึกข้อมูลทางเทคนิคพื้นฐาน เช่น หมายเลข IP และเวลาที่เข้าใช้งาน
+          ในบันทึกระบบ (server logs) เพื่อความปลอดภัยและการให้บริการ ตามนโยบายของ Supabase ตัวแอปเองไม่ได้เก็บหรือส่งข้อมูลอุปกรณ์อื่นใด
+        </p>
+      </article>
+
+      <article id="th-use" class="card">
+        <h2><span class="num">2</span> วิธีที่เราใช้ข้อมูล</h2>
+        <ul>
+          <li>สร้างและยืนยันบัญชี รวมถึงส่งอีเมลยืนยันตัวตน (ส่งโดยระบบ Supabase Auth)</li>
+          <li>ให้คุณเข้าสู่ระบบ ออกจากระบบ และเปลี่ยนรหัสผ่านได้</li>
+          <li>แสดงชื่อผู้ใช้และมาสคอตในหน้าแอป</li>
+          <li>บันทึก คำนวณยอดแต่ละคน (รวม service charge และ VAT) แสดงประวัติบิล และสรุปรายเดือน</li>
+          <li>ติดตามสถานะการจ่ายเงินระหว่างคุณกับเพื่อน</li>
+        </ul>
+        <p>เรา <strong>ไม่</strong> ใช้ข้อมูลของคุณเพื่อโฆษณา ไม่ทำโปรไฟล์ทางการตลาด และไม่ขายข้อมูลให้ใคร</p>
+      </article>
+
+      <article id="th-storage" class="card">
+        <h2><span class="num">3</span> การจัดเก็บและผู้ให้บริการ (Supabase)</h2>
+        <p>
+          ข้อมูลทั้งหมดในข้อ 1 ถูกจัดเก็บบนฐานข้อมูลของ <a href="https://supabase.com" rel="noopener">Supabase</a>
+          ซึ่งเป็นผู้ให้บริการฐานข้อมูลและระบบยืนยันตัวตนบนคลาวด์ที่เราใช้ ข้อมูลถูกจัดเก็บในตารางต่อไปนี้:
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ตาราง</th><th>ข้อมูลที่เก็บ</th></tr></thead>
+            <tbody>
+              <tr><td>ระบบ Auth ของ Supabase</td><td>อีเมล, รหัสผ่าน (เข้ารหัสแบบแฮชโดย Supabase), ชื่อผู้ใช้, มาสคอต, วันที่สร้างบัญชี</td></tr>
+              <tr><td><code>profiles</code></td><td>ชื่อผู้ใช้, มาสคอต, วันที่แก้ไขล่าสุด</td></tr>
+              <tr><td><code>friends</code></td><td>ชื่อเพื่อน, วันที่เพิ่ม</td></tr>
+              <tr><td><code>bills</code></td><td>ชื่อบิล, ชื่อร้าน, % service charge, % VAT, ผู้จ่ายก่อน, วันที่</td></tr>
+              <tr><td><code>bill_items</code></td><td>ชื่อเมนู, ราคา, จำนวน</td></tr>
+              <tr><td><code>bill_participants</code></td><td>ผู้ร่วมบิล, ยอดที่ต้องจ่าย, สถานะจ่ายแล้ว, เวลาที่จ่าย</td></tr>
+              <tr><td><code>item_assignments</code></td><td>ใครหารเมนูไหน</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>มาตรการความปลอดภัย</h3>
+        <ul>
+          <li>ทุกตารางเปิดใช้ <strong>Row-Level Security (RLS)</strong> ผูกกับรหัสผู้ใช้ที่เข้าสู่ระบบ ผู้ใช้แต่ละคนอ่าน/แก้ไขได้เฉพาะข้อมูลของตัวเองเท่านั้น</li>
+          <li>การรับส่งข้อมูลระหว่างแอปกับ Supabase ใช้การเชื่อมต่อแบบเข้ารหัส (HTTPS)</li>
+          <li>บนแอป Android เซสชันการเข้าสู่ระบบถูกเก็บไว้ในหน่วยความจำขณะเปิดแอปเท่านั้น ไม่ได้บันทึกข้อมูลบัญชีหรือบิลลงในพื้นที่เก็บข้อมูลของเครื่อง</li>
+        </ul>
+        <p>ไม่มีระบบใดปลอดภัย 100% แต่เราใช้มาตรการข้างต้นเพื่อปกป้องข้อมูลของคุณอย่างเหมาะสม</p>
+      </article>
+
+      <article id="th-sharing" class="card">
+        <h2><span class="num">4</span> การแชร์ข้อมูล</h2>
+        <ul>
+          <li>เรา <strong>ไม่ขาย ไม่ให้เช่า และไม่แชร์</strong> ข้อมูลของคุณกับบุคคลที่สามเพื่อการโฆษณาหรือการตลาด</li>
+          <li>ข้อมูลถูกประมวลผลโดย <strong>Supabase</strong> ในฐานะผู้ให้บริการจัดเก็บข้อมูลและยืนยันตัวตนแทนเราเท่านั้น
+            (ดู <a href="https://supabase.com/privacy" rel="noopener">นโยบายความเป็นส่วนตัวของ Supabase</a>)</li>
+          <li>แอปไม่มีฟีเจอร์แชร์ข้อมูลไปยังผู้ใช้อื่น ข้อมูลของคุณมองเห็นได้เฉพาะในบัญชีของคุณ</li>
+          <li>เราอาจเปิดเผยข้อมูลหากกฎหมายกำหนด หรือเมื่อได้รับคำสั่งจากหน่วยงานที่มีอำนาจตามกฎหมาย</li>
+        </ul>
+      </article>
+
+      <article id="th-retention" class="card">
+        <h2><span class="num">5</span> การเก็บรักษาและการลบบัญชี/ข้อมูล</h2>
+        <ul>
+          <li>เราเก็บข้อมูลของคุณไว้ตราบเท่าที่บัญชียังเปิดใช้งานอยู่</li>
+          <li><strong>ลบข้อมูลบางส่วนได้เองในแอป:</strong> ลบบิลได้ในหน้าประวัติ (รายการอาหาร การแบ่งจ่าย และสถานะการจ่ายของบิลนั้นจะถูกลบไปด้วย) และลบเพื่อนได้ในหน้ารายชื่อเพื่อน</li>
+          <li><strong>ลบบัญชีทั้งหมด:</strong> ส่งอีเมลจากอีเมลที่ใช้สมัครมาที่
+            <a href="mailto:natchadara5@gmail.com">natchadara5@gmail.com</a>
+            หัวข้อ “ลบบัญชี Meowney” เราจะลบบัญชีภายใน 30 วัน
+            เมื่อบัญชีถูกลบ ข้อมูลทั้งหมด (โปรไฟล์ เพื่อน บิล รายการอาหาร และการแบ่งจ่าย) จะถูกลบถาวรจากฐานข้อมูลโดยอัตโนมัติ และไม่สามารถกู้คืนได้</li>
+        </ul>
+      </article>
+
+      <article id="th-rights" class="card">
+        <h2><span class="num">6</span> สิทธิ์ของผู้ใช้</h2>
+        <p>ตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA) และกฎหมายที่เกี่ยวข้อง คุณมีสิทธิ์:</p>
+        <ul>
+          <li><strong>เข้าถึง</strong> – ดูข้อมูลบัญชี บิล และเพื่อนของคุณได้ในแอปตลอดเวลา</li>
+          <li><strong>แก้ไข</strong> – แก้ไขชื่อผู้ใช้ มาสคอต รหัสผ่าน รายละเอียดบิล และชื่อเพื่อนได้ในแอป</li>
+          <li><strong>ลบ</strong> – ลบบิลหรือเพื่อนในแอป หรือขอให้ลบทั้งบัญชีตามข้อ 5</li>
+          <li><strong>ขอรับสำเนาข้อมูล / คัดค้าน / ถอนความยินยอม</strong> – ติดต่อเราตามข้อ 9</li>
+          <li><strong>ร้องเรียน</strong> – ต่อสำนักงานคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล (สคส.) หากเห็นว่าเราละเมิดสิทธิ์ของคุณ</li>
+        </ul>
+      </article>
+
+      <article id="th-children" class="card">
+        <h2><span class="num">7</span> ความเป็นส่วนตัวของเด็ก</h2>
+        <p>
+          Meowney ไม่ได้ออกแบบมาสำหรับเด็กอายุต่ำกว่า 13 ปี และเราไม่ได้ตั้งใจเก็บข้อมูลจากเด็ก
+          หากคุณเป็นผู้ปกครองและพบว่าบุตรหลานสมัครใช้งาน กรุณาติดต่อเราเพื่อลบบัญชีและข้อมูลดังกล่าว
+        </p>
+      </article>
+
+      <article id="th-changes" class="card">
+        <h2><span class="num">8</span> การเปลี่ยนแปลงนโยบาย</h2>
+        <p>
+          เราอาจปรับปรุงนโยบายนี้เมื่อแอปมีการเปลี่ยนแปลง (เช่น เพิ่มฟีเจอร์ใหม่ที่เกี่ยวกับข้อมูล)
+          ฉบับล่าสุดจะแสดงที่หน้านี้พร้อม “วันที่มีผลบังคับใช้” ใหม่ หากเป็นการเปลี่ยนแปลงสำคัญ เราจะแจ้งให้ทราบผ่านแอปหรืออีเมล
+        </p>
+      </article>
+
+      <article id="th-contact" class="card">
+        <h2><span class="num">9</span> ช่องทางติดต่อ</h2>
+        <p>หากมีคำถามเกี่ยวกับนโยบายนี้ หรือต้องการใช้สิทธิ์ของคุณ ติดต่อได้ที่:</p>
+        <ul>
+          <li>ผู้พัฒนา: Natcha</li>
+          <li>อีเมล: <a href="mailto:natchadara5@gmail.com">natchadara5@gmail.com</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- ENGLISH                                                -->
+    <!-- ===================================================== -->
+    <section id="en" class="lang-section" lang="en">
+      <h2 class="lang-title">English</h2>
+
+      <p>
+        This policy explains how <strong>Meowney</strong> (“the App”), developed by
+        Natcha (“we”, “us”), collects, uses and protects your information.
+        Meowney is a personal restaurant bill-splitting and expense tracking app that records who ordered what,
+        how much each person owes, and who has already paid.
+      </p>
+
+      <nav class="toc" aria-label="Contents">
+        <strong>Contents</strong>
+        <ol>
+          <li><a href="#en-collect">Information We Collect</a></li>
+          <li><a href="#en-use">How We Use Information</a></li>
+          <li><a href="#en-storage">Storage &amp; Service Provider (Supabase)</a></li>
+          <li><a href="#en-sharing">Data Sharing</a></li>
+          <li><a href="#en-retention">Retention &amp; Account/Data Deletion</a></li>
+          <li><a href="#en-rights">Your Rights</a></li>
+          <li><a href="#en-children">Children’s Privacy</a></li>
+          <li><a href="#en-changes">Changes to This Policy</a></li>
+          <li><a href="#en-contact">Contact Us</a></li>
+        </ol>
+      </nav>
+
+      <article id="en-collect" class="card">
+        <h2><span class="num">1</span> Information We Collect</h2>
+
+        <h3>1.1 Account information (provided at sign-up)</h3>
+        <ul>
+          <li><strong>Email address</strong> – used to register and sign in.</li>
+          <li><strong>Password</strong> – sent directly to Supabase’s authentication service; the App itself does not store it.</li>
+          <li><strong>Username</strong> – your display name in the App.</li>
+        </ul>
+        <p>The App supports <strong>email and password sign-in only</strong>. There is no sign-in with Google, Facebook or any other social account.</p>
+
+        <h3>1.2 Profile information</h3>
+        <ul>
+          <li><strong>Username</strong> (editable).</li>
+          <li><strong>Profile mascot</strong> – a text-based cat emoticon you pick from a preset list in the App. <em>It is not a photo.</em></li>
+          <li>Account creation date and profile last-updated date.</li>
+        </ul>
+
+        <h3>1.3 Content you enter in the App</h3>
+        <ul>
+          <li><strong>Friends list</strong> – names you type in yourself (e.g. nicknames) for bill splitting. The App does not access your device contacts.</li>
+          <li><strong>Bills</strong> – bill title, restaurant name (optional), service charge and VAT rates, who paid up front, and creation date.</li>
+          <li><strong>Bill items</strong> – dish name, price and quantity.</li>
+          <li><strong>Splits</strong> – who shares which dish, each person’s amount owed, paid/unpaid status, and the time an entry was marked as paid.</li>
+        </ul>
+        <div class="note">
+          Friend names you enter relate to other people. Please only enter what is needed to split bills.
+          Your friends do not have accounts and cannot access this data through the App.
+        </div>
+
+        <h3>1.4 Information we do <u>not</u> collect</h3>
+        <ul>
+          <li>No access to or permission requests for camera, photos/media, microphone, location (GPS) or contacts.</li>
+          <li>No photo or receipt uploads.</li>
+          <li>No analytics, crash reporting, advertising or push notification services.</li>
+          <li>No real payments are processed – amounts and “paid” status are notes you record yourself.</li>
+        </ul>
+
+        <h3>1.5 Technical information</h3>
+        <p>
+          When the App connects to the server, our provider Supabase may record basic technical data such as IP address and
+          request time in server logs for security and service operation, under Supabase’s own policy. The App itself does not
+          collect or send any other device information.
+        </p>
+      </article>
+
+      <article id="en-use" class="card">
+        <h2><span class="num">2</span> How We Use Information</h2>
+        <ul>
+          <li>Create and verify your account, including sending a verification email (sent by Supabase Auth).</li>
+          <li>Let you sign in, sign out and change your password.</li>
+          <li>Show your username and mascot in the App.</li>
+          <li>Save bills, calculate each person’s share (including service charge and VAT), and show bill history and monthly summaries.</li>
+          <li>Track payment status between you and your friends.</li>
+        </ul>
+        <p>We do <strong>not</strong> use your data for advertising, do not build marketing profiles, and do not sell your data.</p>
+      </article>
+
+      <article id="en-storage" class="card">
+        <h2><span class="num">3</span> Storage &amp; Service Provider (Supabase)</h2>
+        <p>
+          All information in Section 1 is stored in a database hosted by <a href="https://supabase.com" rel="noopener">Supabase</a>,
+          the cloud database and authentication provider we use. Data is stored in the following tables:
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Table</th><th>Data stored</th></tr></thead>
+            <tbody>
+              <tr><td>Supabase Auth</td><td>Email, password (hashed by Supabase), username, mascot, account creation date</td></tr>
+              <tr><td><code>profiles</code></td><td>Username, mascot, last-updated date</td></tr>
+              <tr><td><code>friends</code></td><td>Friend name, date added</td></tr>
+              <tr><td><code>bills</code></td><td>Title, restaurant name, service charge %, VAT %, up-front payer, date</td></tr>
+              <tr><td><code>bill_items</code></td><td>Dish name, price, quantity</td></tr>
+              <tr><td><code>bill_participants</code></td><td>Participant, amount owed, paid status, paid time</td></tr>
+              <tr><td><code>item_assignments</code></td><td>Who shares which dish</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Security measures</h3>
+        <ul>
+          <li>Every table has <strong>Row-Level Security (RLS)</strong> enabled and bound to the signed-in user’s ID, so each user can only read and modify their own data.</li>
+          <li>Data between the App and Supabase is transmitted over an encrypted connection (HTTPS).</li>
+          <li>On Android, your sign-in session is kept in memory only while the App is open. Account and bill data are not saved to device storage.</li>
+        </ul>
+        <p>No system is 100% secure, but we use the measures above to reasonably protect your data.</p>
+      </article>
+
+      <article id="en-sharing" class="card">
+        <h2><span class="num">4</span> Data Sharing</h2>
+        <ul>
+          <li>We <strong>do not sell, rent or share</strong> your data with third parties for advertising or marketing.</li>
+          <li>Data is processed by <strong>Supabase</strong> solely as our storage and authentication provider
+            (see <a href="https://supabase.com/privacy" rel="noopener">Supabase Privacy Policy</a>).</li>
+          <li>The App has no feature to share your data with other users. Your data is visible only within your own account.</li>
+          <li>We may disclose information if required by law or by a valid order from a competent authority.</li>
+        </ul>
+      </article>
+
+      <article id="en-retention" class="card">
+        <h2><span class="num">5</span> Retention &amp; Account/Data Deletion</h2>
+        <ul>
+          <li>We keep your data for as long as your account is active.</li>
+          <li><strong>Delete some data yourself in the App:</strong> delete bills from the History screen (that bill’s items, splits and payment statuses are deleted with it), and delete friends from the Friends screen.</li>
+          <li><strong>Delete your entire account:</strong> email
+            <a href="mailto:natchadara5@gmail.com">natchadara5@gmail.com</a>
+            from your registered email address with the subject “Delete my Meowney account”. We will delete your account within 30 days.
+            When your account is deleted, all associated data (profile, friends, bills, items and splits) is automatically and permanently removed from the database and cannot be recovered.</li>
+        </ul>
+      </article>
+
+      <article id="en-rights" class="card">
+        <h2><span class="num">6</span> Your Rights</h2>
+        <p>Under Thailand’s Personal Data Protection Act B.E. 2562 (PDPA) and other applicable laws, you have the right to:</p>
+        <ul>
+          <li><strong>Access</strong> – view your account, bills and friends in the App at any time.</li>
+          <li><strong>Correct</strong> – edit your username, mascot, password, bill details and friend names in the App.</li>
+          <li><strong>Delete</strong> – delete bills or friends in the App, or request full account deletion as described in Section 5.</li>
+          <li><strong>Request a copy / object / withdraw consent</strong> – contact us as described in Section 9.</li>
+          <li><strong>Complain</strong> – to Thailand’s Personal Data Protection Committee (PDPC) if you believe we have violated your rights.</li>
+        </ul>
+      </article>
+
+      <article id="en-children" class="card">
+        <h2><span class="num">7</span> Children’s Privacy</h2>
+        <p>
+          Meowney is not intended for children under 13, and we do not knowingly collect data from children.
+          If you are a parent or guardian and believe your child has created an account, please contact us so we can delete the account and its data.
+        </p>
+      </article>
+
+      <article id="en-changes" class="card">
+        <h2><span class="num">8</span> Changes to This Policy</h2>
+        <p>
+          We may update this policy when the App changes (for example, when adding new data-related features).
+          The latest version will always be posted on this page with a new effective date. For significant changes, we will notify you in the App or by email.
+        </p>
+      </article>
+
+      <article id="en-contact" class="card">
+        <h2><span class="num">9</span> Contact Us</h2>
+        <p>If you have questions about this policy or want to exercise your rights, contact:</p>
+        <ul>
+          <li>Developer: Natcha</li>
+          <li>Email: <a href="mailto:natchadara5@gmail.com">natchadara5@gmail.com</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <footer>
+      <p class="cat">(=^･ω･^=)</p>
+      <p>© 2026 Meowney · Natcha</p>
+    </footer>
+  </main>
+</body>
+</html>
